@@ -27,7 +27,7 @@ pipeline {
 	            parallel{
 	                stage ('Deploy to Dev'){
 	                    steps {
-	                        sh "scp -i /var/lib/jenkins/workspace/Package/target/*.war centos@${params.tomcat_dev}:/usr/local/apache-tomcat-8.5.31/webapps"
+	                        sh "scp -p -r /var/lib/jenkins/workspace/Package/target/*.war centos@${params.tomcat_dev}:/usr/local/apache-tomcat-8.5.31/webapps"
 	                    }
 	                }
 	
