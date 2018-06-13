@@ -33,7 +33,7 @@ pipeline {
 	
 	                stage ("Deploy to Production"){
 	                    steps {
-	                        sh "scp -p -r /var/lib/jenkins/workspace/Package/target/vprofile-v1.war.war jenkins@${params.tomcat_prod}:/usr/local/apache-tomcat-8.5.31/webapps"
+	                        sh "scp -p -r /var/lib/jenkins/workspace/Package/target/vprofile-v1.war jenkins@${params.tomcat_prod}:/usr/local/apache-tomcat-8.5.31/webapps"
 	                    }
 	                }
 	            }
